@@ -1,0 +1,45 @@
+{% set name = "SHED" %}
+{% set version = "0.7.3" %}
+{% set sha256 = "c916c0fe726d94f6b9179511e62a673289befc1626b9c6257aad14b7ac7e288b" %}
+
+package:
+  name: {{ name|lower }}
+  version: {{ version }}
+
+source:
+  url: https://github.com/xpdAcq/{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
+  sha256: {{ sha256 }}
+
+build:
+  noarch: python
+  number: 0
+  script: {{ PYTHON }} -m pip install . --no-deps -vv
+
+requirements:
+  build:
+    - python >=3
+    - pip
+  run:
+    - python >=3
+    - bluesky
+    - databroker
+    - event-model
+    - matplotlib-base
+    - networkx >=2.0
+    - numpy
+    - rapidz
+    - scipy
+    - xonsh
+
+test:
+  imports:
+    - shed
+    - shed.translation
+
+about:
+  home: https://github.com/xpdAcq/SHED
+  license: BSD-3-Clause
+  license_file: LICENSE
+  summary: Streaming Heterogeneous Event Data
+  doc_url: https://xpdacq.github.io/SHED 
+  dev_url: https://github.com/xpdAcq/SHED
