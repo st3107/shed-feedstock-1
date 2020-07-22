@@ -13,7 +13,7 @@ source:
 build:
   noarch: python
   number: 2
-  script: {{ python }} -m pip install --no-deps .
+  script: {{ PYTHON }} -m pip install --no-deps .
 
 requirements:
   build:

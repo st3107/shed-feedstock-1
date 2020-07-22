@@ -4,9 +4,3 @@ channel_targets:
 - nsls2forge main
 docker_image:
 - nsls2/nsls2forge:latest
-pin_run_as_build:
-  python:
-    min_pin: x.x
-    max_pin: x.x
-python:
-- '3.6'
