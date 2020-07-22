@@ -12,8 +12,8 @@ source:
 
 build:
   noarch: python
-  number: 1
-  script: python -m pip install --no-deps .
+  number: 2
+  script: {{ python }} -m pip install --no-deps .
 
 requirements:
   build:
@@ -44,7 +44,3 @@ about:
   summary: 'Streaming Heterogeneous Event Data'
   doc_url: https://xpdacq.github.io/SHED/ 
   dev_url: https://github.com/xpdAcq/SHED
-
-extra:
-  recipe-maintainers:
-    - st3107

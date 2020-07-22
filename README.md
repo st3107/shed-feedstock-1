@@ -80,5 +80,4 @@ In order to produce a uniquely identifiable distribution:
 Feedstock Maintainers
 =====================
 
-* [@st3107](https://github.com/st3107/)
 
