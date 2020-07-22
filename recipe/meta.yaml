@@ -1,4 +1,4 @@
-{% set name = "shed" %}
+{% set name = "SHED" %}
 {% set version = "0.7.4" %}
 {% set sha256 = "7e051fee4be89b15c87e7b1b4994c442783b680cf28962307dbe1057d9d3ea50" %}
 
@@ -7,14 +7,13 @@ package:
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://github.com/xpdAcq/{{ name }}/releases/download/{{ version }}/SHED-{{ version }}.tar.gz
+  url: https://github.com/xpdAcq/{{ name }}/releases/download/{{ version }}/{{ name }}-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
   noarch: python
-  number: 0
-  script: python -m pip install --no-deps --ignore-installed .
+  number: 1
+  script: python -m pip install --no-deps .
 
 requirements:
   build:
@@ -48,4 +47,4 @@ about:
 
 extra:
   recipe-maintainers:
-    - CJ-Wright
+    - st3107
